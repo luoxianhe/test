@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    
+  </body>
+  <script>
+//       let arr = [1,1,23,2,4,3];
+//       let newarr = new Set(arr);
+//       newarr = Array.from(newarr);
+//      // console.log(newarr)
+
+// //symbes 会把symbol声明的排除在外
+//       let obj = {
+//           [Symbol('name')]:'daima',
+//           age:18,
+//           title:'engineer'
+//       }
+//       //console.log(Object.keys(obj))
+//       for(let p in obj){
+//          // console.log(p)
+//       }
+// //console.log(JSON.stringify(obj))
+
+// //...
+// let arr1=[1,2,1,3];
+// let arr2=[...arr1];
+// //console.log(arr2)
+
+// function add(x,y){
+//     console.log(x,y)
+//  return x+y
+// }
+// const numbers = [3,4]
+// console.log(add(...numbers));
+
+// let objs = {
+//     a:1,
+//     b:2
+// }
+// //console.log(objs)
+// //console.log({...objs})
+
+// //${}
+// //定义需要拼接的字符串
+// //将字符串变量用${}包起来，用到别的地方
+
+// let name = '123';
+// let str = `j=将${numbers}放进来`
+// //console.log(str)
+
+// //map
+// //1.将一个普通数组映射为对象数组
+let mapArr = [1,2,3];
+mapArr = mapArr.map(item=>{
+    return {id:item}
+})
+console.log(mapArr)
+
+// //for in 是es5的标准遍历key
+// //for of 是es6标准 遍历value
+
+// let insetOf =[3,5,9,4,5];
+// insetOf.foo='hello';
+// //console.log(insetOf+'a')
+// for(let i in insetOf){
+//     //console.log(i)
+// }
+// for(let i of insetOf){
+//    // console.log(i)
+// }
+
+// /*（）=》{}箭头函数
+// 箭头函数和普通函数的区别
+// 1.箭头函数是匿名函数，不能作为构造函数，不能使用new
+// 2.箭头函数没有原型属性
+// 3.this指向不同，箭头函数的this是定义时所在的对象，普通函数
+// 看前面有没有.,点的前面是谁this 就是谁没有就是window
+// 4.不可以使用arguments对象，该对象在函数体内不存在
+// */
+
+// //构造函数
+// function Person(name,age,gender){
+//     this.name =name;
+//     this.age =age;
+//     this.gender = gender;
+// }
+// var per = new Person('鹤','18','女')
+// //console.log(per)
+
+
+// let a;
+// //console.log(a)
+// //console.log(b)
+
+// for (var i = 0; i < 3; i++) {
+//     //setTimeout(() => console.log(i), 1);
+//   }
+//   for (let i = 0; i < 3; i++) {
+//     //setTimeout(() => console.log(i), 1);
+//   }
+
+//call apply bind
+var name = 'x小王',age = 17;
+var obj={
+  name:"小张",
+  objage:this.age,
+  myFun:function(fm,t){
+    console.log(this.name+"年龄"+this.age,'来自'+fm+'去往'+t)
+  }
+}
+var db={
+  name:"aa",
+  age:99
+}
+obj.myFun.call(db,'成都','上海')
+obj.myFun.apply(db,['成都','上海'])
+obj.myFun.bind(db,'成都','上海')()
+
+
+var aa=[1,2,3,4,5,6,7,8]
+aa = aa.slice(2,5)
+console.log(aa)
+  </script>
+  
+</html>
